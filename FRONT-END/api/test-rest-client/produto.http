@@ -1,0 +1,59 @@
+@URL=http://localhost/FRONT-END/api
+
+### OBTER TODAS AS produtoS
+
+@JWTUSER=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsImVtYWlsIjoib3N2YWxkb25ldG9AZ21haWwuY29tIiwiYWRtaW4iOjB9.jQPemERbiI4SDclw78ghCkrQyQ2fLeK4JU6H8CDFgFY
+@JWTADMIN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsIm5vbWUiOiJFc3RlZmFuaSIsImVtYWlsIjoiRXN0ZWZhbmlAZ21haWwuY29tIiwiYWRtIjoxfQ.dOSm9fOxGkPV4z_u0Z8hEGhNrx6qOLEp-SuWSaGzqgE
+
+GET {{URL}}/produto/get.php
+
+### ATUALIZAR produto
+POST {{URL}}/produto/update.php?id=24
+Content-Type: application/json
+Authorization: {{JWTADMIN}}
+//Authorization: {{JWTUSER}}
+    
+{
+  "nome": "Cachepo Amadeirado",
+  "descricao": "Esmaltado",
+  "preco": 149.99,
+  "quantidade": 5,
+  "caminho_imagem": "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/decoradenovo/media/uploads/produtos/foto/b1731ace17c4f11204-vaso-ceramica-pote-ctampa-kamala-blue-018m-x-018m-x-030m.jpg",
+  "id_categoria": 2
+}
+
+### CRIAR UM produto
+POST {{URL}}/produto/create.php/
+Content-Type: application/json
+Authorization: {{JWTADMIN}}
+//Authorization: {{JWTUSER}}
+
+{
+  "nome": "Replica",
+  "descricao": "Estefani",
+  "preco": 312839120390123.99,
+  "quantidade": 5,
+  "caminho_imagem": "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/decoradenovo/media/uploads/produtos/foto/b1731ace17c4f11204-vaso-ceramica-pote-ctampa-kamala-blue-018m-x-018m-x-030m.jpg",
+  "id_categoria": 25
+}
+
+### DELETAR UM produto
+
+GET {{URL}}/produto/delete.php?id=25
+Authorization: {{JWTADMIN}}
+//Authorization: {{JWTUSER}}
+
+
+
+### -----------------------------------------
+### Obter todos os produtos de uma categoria
+GET {{URL}}/produto/get.php?categoria=2
+Authorization: {{JWTADMIN}}
+### -----------------------------------------
+
+
+### -----------------------------------------
+### Obter um produto pelo ID
+GET {{URL}}/produto/get.php?id=21
+Authorization: {{JWTADMIN}}
+### -----------------------------------------

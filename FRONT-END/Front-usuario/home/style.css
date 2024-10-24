@@ -1,0 +1,217 @@
+/* Importando uma fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+    /* Associando variáveis CSS a cores específicas */
+    --bistre: #3C3024;
+    --brown: #803104;
+    --bernRed: #792002;
+    --coyote: #826D47;
+    --darkGreen: #01200f;
+    --smokyBlack: #151309;
+    --black: #333;
+    --white: #fff;
+    --lightBg: #f5f5f5;
+    --vanila:  #E8D8A5;
+    --border: .2rem solid var(--smokyBlack);
+    /* Estilo de borda*/
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    /* Estilo de sompra dos elementos*/
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--brown);
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+body {
+    background: var(--lightBg);
+}
+
+section {
+    padding: 3rem 2rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn {
+    display: inline-block;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+}
+
+.message {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--lightBg);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 10000;
+    justify-content: space-between;
+}
+
+.message span {
+    color: var(--smokyBlack);
+    font-size: 2rem;
+}
+
+.message i {
+    font-size: 2.5rem;
+    color: var(--bernRed);
+    cursor: pointer;
+}
+
+.message i:hover {
+    transform: rotate(90deg);
+}
+
+.btn {
+    background-color: var(--bernRed) !important;
+}
+
+.delete-btn {
+    background-color: var(--bernRed);
+}
+
+
+.option-btn {
+    background-color: var(--coyote);
+}
+
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+    background-color: var(--smokyBlack) !important;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.form-container form {
+    padding: 2rem;
+    border-radius: .5rem;
+    /*border: var(--border);*/
+    background-color: #D0DB97;
+    box-shadow: var(--box-shadow);
+    width: 50rem;
+    text-align: center;
+}
+
+.form-container form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--bernRed);
+    margin-bottom: 1rem;
+}
+
+.form-container form .box {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--smokyBlack) !important;
+    /*border: var(--border);*/
+    background-color: var(--lightBg);
+    margin: 1rem 0;
+    border-radius: .5rem;
+}
+
+.form-container form p {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--smokyBlack);
+}
+
+.form-container form p a {
+    color: var(--bernRed);
+}
+
+.form-container form p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media (max-width: 768px) {
+
+    /* Estilos para telas menores que 768px */
+    .form-container form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Estilos para telas menores que 480px */
+    .form-container form {
+        width: 100%;
+    }
+
+}
+
+/*
+.login-text {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.login-link {
+    color: var(--bernRed);
+}*/

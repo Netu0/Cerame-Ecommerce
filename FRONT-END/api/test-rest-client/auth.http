@@ -1,0 +1,10 @@
+### cliente de autenticação
+@URL=http://localhost/FRONT-END/api
+
+### Recurso de autentificação
+POST {{URL}}/auth/auth.php
+
+{
+    "username": "Estefani@gmail.com",
+    "password": "1234"
+}

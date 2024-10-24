@@ -1,0 +1,143 @@
+:root {
+
+    /*------------------------------------------------------------------------------------------------------------
+    * Cores
+    */
+
+    --middle-blue-green: #826D47;
+    --sonic-silver: hsl(0, 0%, 44%);
+    --eerie-black: #3C3024;
+    --ocean-green: #803104;
+    --candy-pink: #792002;
+    --cultured: hsl(0, 0%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --black: #151309;
+    --darkGreen: #01200f;
+    --lightBg: #f5f5f5;
+    --vanila: #E8D8A5;
+
+
+    /*------------------------------------------------------------------------------------------------------------
+    * Tipografia
+    */
+
+    --ff-jost: "Jost", sans-serif;
+
+    --fs-1: 2.5rem;
+    --fs-2: 1.75rem;
+    --fs-3: 1.625rem;
+    --fs-4: 1.5rem;
+    --fs-5: 1.375rem;
+    --fs-6: 1.25rem;
+    --fs-7: 1.125rem;
+    --fs-8: 0.938rem;
+    --fs-9: 0.875rem;
+    --fs-10: 0.813rem;
+
+    --fw-500: 500;
+    --fw-600: 600;
+
+
+    /*------------------------------------------------------------------------------------------------------------
+    * Transições
+    */
+
+    --transition-1: 0.25s ease;
+    --transition-2: 0.75s ease;
+    --cubic-out: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-in: cubic-bezier(0.33, 0.85, 0.56, 1.02);
+
+    /*------------------------------------------------------------------------------------------------------------
+    * Espaçamento
+    */
+
+    --section-padding: 60px;
+
+}
+
+
+/*/*------------------------------------------------------------------------------------------------------------
+  * FORMULÁRIOS
+  */
+
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: var(--lightBg);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+}
+
+.form-infos {
+    text-align: center;
+}
+
+.form-infos h3 {
+    color: var(--candy-pink);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--middle-blue-green);
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.btn {
+    background: var(--eerie-black);
+    color: var(--white);
+    font-weight: var(--fw-600);
+    height: 60px;
+    width: 200px; /* Defina a largura desejada para o botão */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border: none; /* Remova a borda original */
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Adicione um cursor de clique */
+}
+
+.btn:hover, .btn:focus {
+    background: var(--middle-blue-green);
+    color: var(--white);
+    outline: none; /* Remova a borda de foco padrão */
+}
+
+.login-text {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.login-link {
+    color: var(--candy-pink);
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    color: var(--middle-blue-green);
+}

@@ -1,0 +1,40 @@
+@URL=http://localhost/FRONT-END/api
+@JWTUSER=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjMsImVtYWlsIjoib3N2YWxkb25ldG9AZ21haWwuY29tIiwiYWRtaW4iOjB9.jQPemERbiI4SDclw78ghCkrQyQ2fLeK4JU6H8CDFgFY
+@JWTADMIN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsIm5vbWUiOiJFc3RlZmFuaSIsImVtYWlsIjoiRXN0ZWZhbmlAZ21haWwuY29tIiwiYWRtIjoxfQ.dOSm9fOxGkPV4z_u0Z8hEGhNrx6qOLEp-SuWSaGzqgE
+
+### OBTER TODAS AS categoriaS
+
+GET {{URL}}/categoria/get.php
+
+### ATUALIZAR categoria
+POST {{URL}}/categoria/update.php?id=32
+Content-Type: application/json
+Authorization:  {{JWTADMIN}}
+//Authorization: {{JWTUSER}}
+    
+{
+  "nome": "Copo"
+}
+
+### -----------------------------------
+### Obter uma categoria pelo ID
+GET {{URL}}/categoria/get.php?id=28
+### -----------------------------------
+
+
+### CRIAR UMA categoria
+POST {{URL}}/categoria/create.php/
+Content-Type: application/json
+Authorization: {{JWTADMIN}}
+//Authorization: {{JWTUSER}}
+
+{
+  "nome": "sapo"
+}
+
+
+### DELETAR UM categoria
+
+GET {{URL}}/categoria/delete.php?id=35
+Authorization: {{JWTADMIN}}
+//Authorization: {{JWTUSER}}

@@ -1,0 +1,59 @@
+@URL=http://localhost/FRONT-END/api
+
+#JWT de Usuário:
+#@JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJub21lIjoiSnVjYSBkZSBPbGl2ZWlyYSIsImVtYWlsIjoianVjYW9saXZlaXJhQGdtYWlsLmNvbSIsImFkbWluIjoiMCJ9.LjMNb9AJINmj7_UsrRE7UqN8Xn8Hb0VRk68kV1YASVE
+
+### JWT Admin
+@JWTADMIN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzYsIm5vbWUiOiJFc3RlZmFuaSIsImVtYWlsIjoiRXN0ZWZhbmlAZ21haWwuY29tIiwiYWRtIjoxfQ.dOSm9fOxGkPV4z_u0Z8hEGhNrx6qOLEp-SuWSaGzqgE
+
+
+### -----------------------------------------
+### Criar uma compra
+POST {{URL}}/compra/create.php
+Content-Type: application/json
+Authorization: {{JWTADMIN}}
+
+{
+    "id_usuario": 43,  
+    "valor": 1000,
+    "itens": [
+        { 
+            "produto_id": 1, 
+            "quantidade": 2
+        },
+        { 
+            "produto_id": 3, 
+            "quantidade": 1
+        }
+    ]
+}
+
+### -----------------------------------------
+### Obter todas as compras do usuário autenticado
+GET {{URL}}/compra/get.php?id=55
+Authorization: {{JWTADMIN}}
+### -----------------------------------------
+
+
+### -----------------------------------------
+### Obter todas as compras do sistema
+###  Permissão: somente admin.
+GET {{URL}}/compra/get.php?todos=1
+Authorization: {{JWTADMIN}}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Obter uma compra pelo ID
+GET {{URL}}/compra/get.php?id=55
+Authorization: {{JWTADMIN}}
+### -----------------------------------------
+
+
+
+### -----------------------------------------
+### Deletar uma compra
+GET {{URL}}/compra/delete.php?id=53
+Authorization: {{JWTADMIN}}
+### -----------------------------------------

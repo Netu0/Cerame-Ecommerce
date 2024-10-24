@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ceramê</title>
+
+    <!--favicon-->
+
+
+    <!--css-->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" type="text/css" href="../produtoCategoria/style.css">
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <!--<header class="header active" data-header>-->
+    <header class="header" data-header>
+        <div class="container">
+
+            <div class="overlay" data-overlay></div>
+
+            <a href="index.html" class="logo">
+                <img src="../img/cerame2.png" alt="Ceramê logo" width="130" height="30">
+            </a>
+
+            <div class="header-actions">
+
+                <button class="header-action-btn">
+                    <a href="perfil.html" class="header-link">
+                        <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+                        <p class="header-action-label">Perfil</p>
+                    </a>
+                </button>
+
+                <button class="header-action-btn">
+                    <a href="cart.html" class="header-link">
+                        <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+                        <p class="header-action-label">Carrinho</p>
+
+                        <div class="btn-badge green" aria-hidden="true"></div>
+                    </a>
+                </button>
+            </div>
+
+            <button class="nav-open-btn" data-nav-open-btn aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+
+                <div class="navbar-list">
+
+                    <div class="navbar-top">
+
+                        <a href="index.html" class="logo">
+                            <img src="../img/Logo.jpg" alt="Ceramê logo" width="130" height="31">
+                        </a>
+
+                        <button class="nav-close-btn" data-nav-close-btn aria-label="Fechar menu">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </div>
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Início</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#categorias" class="navbar-link">Categorias</a>
+                        <div class="dropdown-content">
+                            <a href="../produtoCategoria/xicaras.html">Xícaras</a>
+                            <a href="../produtoCategoria/copos.html">Copos</a>
+                            <a href="../produtoCategoria/pratos.html">Pratos</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="about.html" class="navbar-link">Sobre</a>
+                    </li>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="main-content">
+        <article>
+
+            <!--HERO-->
+            <!-- adcionando conteúdo desejado para criar uma introdução 
+                ou uma apresentação marcante no topo da página-->
+            <section class="hero" id="home" style="background-image: url('../img/banner2.webp')">
+
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="hero-subtitle">Descubra a Arte em Cada Peça:
+                            Cerâmicas Exclusivas para um Lar com Alma.</p>
+
+                        <h2 class="h2 hero-title">Crie um Lar Inspirador com Nossas Cerâmicas Artesanais!</h2>
+
+                        <button class="btn btn-primary">Compre agora</button>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!--SERVIÇO-->
+
+            <section class="service">
+                <div class="container">
+
+                    <ul class="service-list">
+
+                        <li class="service-item">
+                            <div class="service-item-icon">
+                                <img src="../img/service-icon-1.svg" alt="Icone de serviço">
+                            </div>
+
+                            <div class="service-content">
+                                <p class="service-item-title">Envio gratuito</p>
+
+                                <p class="service-item-text">Em todas as compras acima de R$99,00</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-item-icon">
+                                <img src="../img/service-icon-2.svg" alt="Icone de serviço">
+                            </div>
+
+                            <div class="service-content">
+                                <p class="service-item-title">Fácil devolução</p>
+
+                                <p class="service-item-text">Política de 15 dias para devolução</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-item-icon">
+                                <img src="../img/service-icon-3.svg" alt="Icone de serviço">
+                            </div>
+
+                            <div class="service-content">
+                                <p class="service-item-title">Pagamento seguro</p>
+
+                                <p class="service-item-text">100% de segurança garantida</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-item-icon">
+                                <img src="../img/service-icon-4.svg" alt="Icone de serviço">
+                            </div>
+
+                            <div class="service-content">
+                                <p class="service-item-title">Atendimento especial</p>
+
+                                <p class="service-item-text">Suporte 24/7</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+
+            <!--CATEGORIAS-->
+
+
+            <!--PRODUTOS-->
+
+            <section class="section product">
+                <div class="container">
+                    <div id="produtos"></div>
+                </div>
+            </section>
+
+
+
+            <!--FOOTER-->
+            <footer class="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="footer-brand">
+                            <a href="#" class="logo">
+                                <img src="../img/logoPote.png" alt="Ceramê logo" width="130" height="31">
+                            </a>
+                            <p class="footer-text">
+                                Onde a qualidade, elegância e sutileza se encontram em
+                                cada detalhe.
+                            </p>
+
+
+                            <ul class="social-list">
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <ion-icon name="logo-facebook"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <ion-icon name="logo-instagram"></ion-icon>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="social-link">
+                                        <ion-icon name="logo-pinterest"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+
+                        </div>
+
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Informações</p>
+                            </li>
+
+                            <li>
+                                <a href="about.html" class="footer-link">Sobre nós</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="footer-link">Tipos de pagamento</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="footer-link">Política de reembolço</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright">
+                            © 2023 Ceramê. Todos os direitos reservados. <br>
+                            Endereço: Avenida Brasil, 2443 - Medianeira, Paraná - CEP: 8485-000 <br>
+                            Telefone: (45) 3456-7890 | Email: contato@cerame.com
+                        </p>
+
+                        <div class="payment">
+                            <p class="payment-title">Nós aceitamos</p>
+                            <img src="../img/payment-img.png" alt="Online payment logos" class="payment-img">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+        </article>
+    </main>
+
+    <!--link js-->
+    <script src="script.js"></script>
+    <script src="../produtoCategoria/produtos.js"></script>
+
+    <!--ionicon link-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
