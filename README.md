@@ -1,4 +1,4 @@
-# Ceram-Ecommerce
+# Cerame-Ecommerce
 Ecommerce focado na venda de cerâmicas
 
 Projeto feito por: Estefani Aparecida Rup Roza e Oswaldo Beltrani Neto 
